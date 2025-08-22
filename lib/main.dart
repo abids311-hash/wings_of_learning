@@ -13,13 +13,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Wings of Learning',
       theme: ThemeData(primarySwatch: Colors.blue),
-      initialRoute: '/',
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/login', // start on the login page
       routes: {
         '/': (context) => const HomePage(),
         '/login': (context) => const LoginPage(),
-        '/hello': (context) => const HelloPage(),
+        '/hello': (context) => const HelloPage(), // <— points to your hello.dart
       },
-      debugShowCheckedModeBanner: false,
     );
   }
 }
