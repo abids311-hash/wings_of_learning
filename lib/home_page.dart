@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: const Text('Home Page')),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/login'),
