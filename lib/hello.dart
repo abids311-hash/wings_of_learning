@@ -7,7 +7,9 @@ class HelloPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Hello Page')),
-      body: const Center(child: Text('Hello from Hello Page!')),
+      body: const Center(
+        child: Text('Hello from Hello Page'),
+      ),
     );
   }
 }
