@@ -6,24 +6,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
+      appBar: AppBar(title: const Text('Home Page')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/login');
-              },
+              onPressed: () => Navigator.pushNamed(context, '/login'),
               child: const Text('Go to Login Page'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/hello');
-              },
+              onPressed: () => Navigator.pushNamed(context, '/hello'),
               child: const Text('Go to Hello Page'),
             ),
           ],
