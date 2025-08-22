@@ -1,24 +1,34 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
-import 'login_page.dart';
-import 'hello.dart';
 
-void main() {
-  runApp(MyApp());
-}
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Wings of Learning',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomePage(),
-        '/login': (context) => LoginPage(),
-        '/hello': (context) => HelloPage(),
-      },
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Home Page'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/login');
+              },
+              child: const Text('Go to Login Page'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/hello');
+              },
+              child: const Text('Go to Hello Page'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
