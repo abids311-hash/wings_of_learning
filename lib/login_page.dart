@@ -9,9 +9,7 @@ class LoginPage extends StatelessWidget {
       appBar: AppBar(title: const Text('Login Page')),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/hello');
-          },
+          onPressed: () => Navigator.pushNamed(context, '/hello'),
           child: const Text('Go to Hello Page'),
         ),
       ),
