@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 import 'login_page.dart';
 import 'hello.dart';
 
@@ -13,11 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Wings of Learning',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: '/login',
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
       routes: {
+        '/': (context) => const HomePage(),
         '/login': (context) => const LoginPage(),
         '/hello': (context) => const HelloPage(),
       },
