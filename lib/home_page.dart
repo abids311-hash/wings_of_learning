@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
+import 'login_page.dart';
+import 'hello.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+void main() {
+  runApp(MyApp());
+}
 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Wings of Learning"),
-      ),
-      body: const Center(
-        child: Text(
-          "Welcome to Wings of Learning App!",
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+    return MaterialApp(
+      title: 'Wings of Learning',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/login': (context) => LoginPage(),
+        '/hello': (context) => HelloPage(),
+      },
     );
   }
 }
