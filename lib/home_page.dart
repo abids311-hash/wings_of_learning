@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/login'),
               child: const Text('Go to Login Page'),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/hello'),
               child: const Text('Go to Hello Page'),
