@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const WingsOfLearningApp());
+  runApp(const MyApp());
 }
 
-class WingsOfLearningApp extends StatelessWidget {
-  const WingsOfLearningApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wings of Learning',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       home: const HomePage(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -24,11 +25,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Wings of Learning')),
+      appBar: AppBar(
+        title: const Text("Hello Flutter"),
+      ),
       body: const Center(
         child: Text(
-          'Welcome to Wings of Learning 🚀',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          "Welcome to Flutter!",
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );
