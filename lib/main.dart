@@ -1,39 +1,24 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
+import 'login_page.dart';
+import 'hello.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Hello Flutter"),
-      ),
-      body: const Center(
-        child: Text(
-          "Welcome to Flutter!",
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
+      title: 'Wings of Learning',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/login': (context) => LoginPage(),
+        '/hello': (context) => HelloPage(),
+      },
     );
   }
 }
